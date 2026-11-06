@@ -1,0 +1,28 @@
+{
+	"url": "/generate-speech",
+	"method": "POST",
+	"timeout": 300000,
+	"body": {
+		"voiceId": "{{parameters.voiceId}}",
+		"text": "{{parameters.text}}",
+		"ssml": "{{parameters.ssml}}",
+		"settings": {
+			"locale": "{{parameters.locale}}",
+			"speed": "{{parameters.speed}}",
+			"pitch": "{{parameters.pitch}}",
+			"volume": "{{parameters.volume}}",
+			"style": "{{parameters.style}}",
+			"styleIntensity": "{{parameters.styleIntensity}}"
+		}
+	},
+	"response": {
+		"type": {
+			"200": "binary",
+			"*": "automatic"
+		},
+		"output": {
+			"data": "{{body}}",
+			"fileName": "{{ifempty(parameters.fileName, 'speech.mp3')}}"
+		}
+	}
+}

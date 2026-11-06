@@ -1,0 +1,61 @@
+[
+	{
+		"name": "name",
+		"type": "text",
+		"label": "Name",
+		"required": true,
+		"help": "The display name of the new voice."
+	},
+	{
+		"name": "sampleSource",
+		"type": "select",
+		"label": "Sample source",
+		"default": "file",
+		"required": true,
+		"options": [
+			{
+				"label": "File",
+				"value": "file",
+				"nested": [
+					{
+						"name": "fileName",
+						"type": "filename",
+						"label": "File name",
+						"semantic": "file:name",
+						"required": true
+					},
+					{
+						"name": "data",
+						"type": "buffer",
+						"label": "Data",
+						"semantic": "file:data",
+						"required": true,
+						"help": "An MP3, WAV or OGG file of up to 20 MB."
+					}
+				]
+			},
+			{
+				"label": "URL",
+				"value": "url",
+				"nested": [
+					{
+						"name": "sampleUrl",
+						"type": "url",
+						"label": "Sample URL",
+						"required": true,
+						"help": "A public link to an MP3, WAV or OGG file. For example, the **Sample URL** from the **Design a voice** module."
+					}
+				]
+			}
+		],
+		"help": "A clean 10–30 second recording of one speaker, without music or background noise."
+	},
+	{
+		"name": "rightsConfirmed",
+		"type": "boolean",
+		"label": "I own this voice or the speaker consented to cloning it",
+		"required": true,
+		"default": false,
+		"help": "Required to clone a voice. See the [Acceptable Use Policy](https://www.lazybird.app/acceptable-use)."
+	}
+]

@@ -1,0 +1,158 @@
+[
+	{
+		"name": "voiceId",
+		"type": "text",
+		"label": "Voice ID",
+		"required": true,
+		"rpc": {
+			"label": "Search voices",
+			"url": "rpc://listVoices",
+			"parameters": [
+				{
+					"name": "section",
+					"type": "select",
+					"label": "Voices",
+					"default": "library",
+					"options": [
+						{
+							"label": "Voice library",
+							"value": "library"
+						},
+						{
+							"label": "My voices",
+							"value": "myVoices"
+						}
+					]
+				},
+				{
+					"name": "q",
+					"type": "text",
+					"label": "Search",
+					"help": "Words in the voice's name, description or labels."
+				},
+				{
+					"name": "language",
+					"type": "text",
+					"label": "Language",
+					"help": "A locale such as `en-US`, or a language such as `en`."
+				},
+				{
+					"name": "gender",
+					"type": "select",
+					"label": "Gender",
+					"options": [
+						{
+							"label": "Female",
+							"value": "female"
+						},
+						{
+							"label": "Male",
+							"value": "male"
+						}
+					]
+				}
+			]
+		},
+		"help": "Map a voice ID, or click **Search voices** to find one. The search shows the first 50 matches; narrow it down to find others."
+	},
+	{
+		"name": "inputType",
+		"type": "select",
+		"label": "Input type",
+		"default": "text",
+		"required": true,
+		"options": [
+			{
+				"label": "Text",
+				"value": "text",
+				"nested": [
+					{
+						"name": "text",
+						"type": "text",
+						"multiline": true,
+						"label": "Text",
+						"required": true,
+						"help": "The text to speak."
+					}
+				]
+			},
+			{
+				"label": "SSML",
+				"value": "ssml",
+				"nested": [
+					{
+						"name": "ssml",
+						"type": "text",
+						"multiline": true,
+						"label": "SSML",
+						"required": true,
+						"help": "SSML to speak, for pauses, emphasis or pronunciation. For example: `<speak>Hello <break time=\"500ms\"/> world.</speak>`"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "fileName",
+		"type": "filename",
+		"label": "File name",
+		"help": "The name of the output file. Defaults to `speech.mp3`."
+	},
+	{
+		"name": "locale",
+		"type": "text",
+		"label": "Locale",
+		"advanced": true,
+		"help": "Language and accent to speak in, as a locale with a region. For example: `en-GB` or `es-ES`. Any voice can speak any supported language. Leave empty to use the voice's own language."
+	},
+	{
+		"name": "speed",
+		"type": "number",
+		"label": "Speed",
+		"advanced": true,
+		"validate": {
+			"min": 0.25,
+			"max": 4
+		},
+		"help": "1 is normal speed. For example: `1.2` speaks 20% faster."
+	},
+	{
+		"name": "pitch",
+		"type": "number",
+		"label": "Pitch",
+		"advanced": true,
+		"validate": {
+			"min": 0.25,
+			"max": 4
+		},
+		"help": "1 is the voice's default pitch."
+	},
+	{
+		"name": "volume",
+		"type": "number",
+		"label": "Volume",
+		"advanced": true,
+		"validate": {
+			"min": 0,
+			"max": 4
+		},
+		"help": "1 is the default volume; 0 is silent."
+	},
+	{
+		"name": "style",
+		"type": "text",
+		"label": "Style",
+		"advanced": true,
+		"help": "A speaking style from the voice's **Styles** list (see the **Get a voice** module). Ignored when the voice doesn't have it."
+	},
+	{
+		"name": "styleIntensity",
+		"type": "number",
+		"label": "Style intensity",
+		"advanced": true,
+		"validate": {
+			"min": 0
+		},
+		"help": "Strength of the style. 1 is the default."
+	}
+]

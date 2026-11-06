@@ -1,0 +1,30 @@
+[
+	{
+		"label": "Speech",
+		"modules": [
+			"generateSpeech"
+		]
+	},
+	{
+		"label": "Voices",
+		"modules": [
+			"searchVoices",
+			"getVoice",
+			"cloneVoice",
+			"designVoice",
+			"deleteVoice"
+		]
+	},
+	{
+		"label": "Account",
+		"modules": [
+			"getAccount"
+		]
+	},
+	{
+		"label": "Other",
+		"modules": [
+			"makeApiCall"
+		]
+	}
+]

@@ -1,0 +1,17 @@
+[
+	{
+		"name": "sampleUrl",
+		"type": "url",
+		"label": "Sample URL"
+	},
+	{
+		"name": "seed",
+		"type": "uinteger",
+		"label": "Seed"
+	},
+	{
+		"name": "duration",
+		"type": "number",
+		"label": "Duration (seconds)"
+	}
+]

@@ -1,0 +1,123 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "Voice ID"
+	},
+	{
+		"name": "displayName",
+		"type": "text",
+		"label": "Name"
+	},
+	{
+		"name": "description",
+		"type": "text",
+		"label": "Description"
+	},
+	{
+		"name": "language",
+		"type": "text",
+		"label": "Language"
+	},
+	{
+		"name": "detectedLanguage",
+		"type": "text",
+		"label": "Detected language"
+	},
+	{
+		"name": "detectedLocale",
+		"type": "text",
+		"label": "Detected accent"
+	},
+	{
+		"name": "gender",
+		"type": "text",
+		"label": "Gender"
+	},
+	{
+		"name": "labels",
+		"type": "array",
+		"label": "Labels",
+		"spec": {
+			"type": "text"
+		}
+	},
+	{
+		"name": "styleList",
+		"type": "array",
+		"label": "Styles",
+		"spec": {
+			"type": "text"
+		}
+	},
+	{
+		"name": "avatar",
+		"type": "url",
+		"label": "Avatar URL"
+	},
+	{
+		"name": "previewText",
+		"type": "text",
+		"label": "Preview text"
+	},
+	{
+		"name": "previewUrl",
+		"type": "url",
+		"label": "Preview URL"
+	},
+	{
+		"name": "scope",
+		"type": "text",
+		"label": "Scope"
+	},
+	{
+		"name": "published",
+		"type": "boolean",
+		"label": "Published"
+	},
+	{
+		"name": "mine",
+		"type": "boolean",
+		"label": "Mine"
+	},
+	{
+		"name": "favorite",
+		"type": "boolean",
+		"label": "Favorite"
+	},
+	{
+		"name": "official",
+		"type": "boolean",
+		"label": "Official"
+	},
+	{
+		"name": "featured",
+		"type": "boolean",
+		"label": "Featured"
+	},
+	{
+		"name": "popular",
+		"type": "boolean",
+		"label": "Popular"
+	},
+	{
+		"name": "trending",
+		"type": "boolean",
+		"label": "Trending"
+	},
+	{
+		"name": "createdAt",
+		"type": "date",
+		"label": "Created at"
+	},
+	{
+		"name": "ownerNickname",
+		"type": "text",
+		"label": "Owner name"
+	},
+	{
+		"name": "ownerUserId",
+		"type": "text",
+		"label": "Owner user ID"
+	}
+]

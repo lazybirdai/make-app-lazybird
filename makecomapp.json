@@ -1,0 +1,231 @@
+{
+	"fileVersion": 1,
+	"generalCodeFiles": {
+		"base": "general/base.imljson",
+		"common": "general/common.json",
+		"readme": "README.md",
+		"groups": "general/groups.json"
+	},
+	"components": {
+		"connection": {
+			"lazybird": {
+				"label": "Lazybird",
+				"connectionType": "basic",
+				"codeFiles": {
+					"communication": "connections/lazybird/communication.imljson",
+					"params": "connections/lazybird/params.imljson",
+					"common": "connections/lazybird/common.json"
+				}
+			}
+		},
+		"endpoint": {},
+		"webhook": {},
+		"module": {
+			"generateSpeech": {
+				"label": "Generate speech",
+				"description": "Generates an MP3 voiceover from text or SSML with a Lazybird voice.",
+				"moduleType": "action",
+				"actionCrud": "create",
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/generateSpeech/communication.imljson",
+					"staticParams": "modules/generateSpeech/static-params.imljson",
+					"mappableParams": "modules/generateSpeech/mappable-params.imljson",
+					"interface": "modules/generateSpeech/interface.imljson",
+					"samples": "modules/generateSpeech/samples.imljson",
+					"scope": "modules/generateSpeech/scope.imljson"
+				}
+			},
+			"searchVoices": {
+				"label": "Search voices",
+				"description": "Returns a list of voices filtered by text, language, gender or labels, from the Lazybird voice library or your own voices.",
+				"moduleType": "search",
+				"actionCrud": "read",
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/searchVoices/communication.imljson",
+					"staticParams": "modules/searchVoices/static-params.imljson",
+					"mappableParams": "modules/searchVoices/mappable-params.imljson",
+					"interface": "modules/searchVoices/interface.imljson",
+					"samples": "modules/searchVoices/samples.imljson",
+					"scope": "modules/searchVoices/scope.imljson"
+				}
+			},
+			"getVoice": {
+				"label": "Get a voice",
+				"description": "Returns information about a specific voice by its voice ID, including its languages and speaking styles.",
+				"moduleType": "action",
+				"actionCrud": "read",
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/getVoice/communication.imljson",
+					"staticParams": "modules/getVoice/static-params.imljson",
+					"mappableParams": "modules/getVoice/mappable-params.imljson",
+					"interface": "modules/getVoice/interface.imljson",
+					"samples": "modules/getVoice/samples.imljson",
+					"scope": "modules/getVoice/scope.imljson"
+				}
+			},
+			"cloneVoice": {
+				"label": "Create a cloned voice",
+				"description": "Creates a private voice from a 10\u201330 second recording of one speaker. Requires a free voice cloning slot on your Lazybird plan.",
+				"moduleType": "action",
+				"actionCrud": "create",
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/cloneVoice/communication.imljson",
+					"staticParams": "modules/cloneVoice/static-params.imljson",
+					"mappableParams": "modules/cloneVoice/mappable-params.imljson",
+					"interface": "modules/cloneVoice/interface.imljson",
+					"samples": "modules/cloneVoice/samples.imljson",
+					"scope": "modules/cloneVoice/scope.imljson"
+				}
+			},
+			"designVoice": {
+				"label": "Design a voice",
+				"description": "Creates a voice sample from a short description of the speaker. Clone the sample with the Create a cloned voice module to keep the voice.",
+				"moduleType": "action",
+				"actionCrud": "create",
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/designVoice/communication.imljson",
+					"staticParams": "modules/designVoice/static-params.imljson",
+					"mappableParams": "modules/designVoice/mappable-params.imljson",
+					"interface": "modules/designVoice/interface.imljson",
+					"samples": "modules/designVoice/samples.imljson",
+					"scope": "modules/designVoice/scope.imljson"
+				}
+			},
+			"deleteVoice": {
+				"label": "Delete a voice",
+				"description": "Deletes one of your cloned or designed voices. This action cannot be undone.",
+				"moduleType": "action",
+				"actionCrud": "delete",
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/deleteVoice/communication.imljson",
+					"staticParams": "modules/deleteVoice/static-params.imljson",
+					"mappableParams": "modules/deleteVoice/mappable-params.imljson",
+					"interface": "modules/deleteVoice/interface.imljson",
+					"samples": "modules/deleteVoice/samples.imljson",
+					"scope": "modules/deleteVoice/scope.imljson"
+				}
+			},
+			"getAccount": {
+				"label": "Get my account",
+				"description": "Returns your Lazybird plan and the credits you used in the current period.",
+				"moduleType": "action",
+				"actionCrud": "read",
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/getAccount/communication.imljson",
+					"staticParams": "modules/getAccount/static-params.imljson",
+					"mappableParams": "modules/getAccount/mappable-params.imljson",
+					"interface": "modules/getAccount/interface.imljson",
+					"samples": "modules/getAccount/samples.imljson",
+					"scope": "modules/getAccount/scope.imljson"
+				}
+			},
+			"makeApiCall": {
+				"label": "Make an API call",
+				"description": "Performs an arbitrary authorized API call.",
+				"moduleType": "universal",
+				"actionCrud": null,
+				"connection": "lazybird",
+				"altConnection": null,
+				"webhook": null,
+				"codeFiles": {
+					"communication": "modules/makeApiCall/communication.imljson",
+					"staticParams": "modules/makeApiCall/static-params.imljson",
+					"mappableParams": "modules/makeApiCall/mappable-params.imljson",
+					"interface": "modules/makeApiCall/interface.imljson",
+					"samples": "modules/makeApiCall/samples.imljson",
+					"scope": "modules/makeApiCall/scope.imljson"
+				}
+			}
+		},
+		"rpc": {
+			"listVoices": {
+				"label": "Search voices",
+				"connection": "lazybird",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "rpcs/listVoices/communication.imljson",
+					"params": "rpcs/listVoices/params.imljson"
+				}
+			}
+		},
+		"function": {}
+	},
+	"origins": [
+		{
+			"label": "Make US2",
+			"baseUrl": "https://us2.make.com",
+			"appId": "lazybird-7fp8is",
+			"appVersion": 1,
+			"apikeyFile": ".secrets/apikey",
+			"idMapping": {
+				"connection": [
+					{
+						"local": "lazybird",
+						"remote": "lazybird-7fp8is"
+					}
+				],
+				"module": [
+					{
+						"local": "generateSpeech",
+						"remote": "generateSpeech"
+					},
+					{
+						"local": "searchVoices",
+						"remote": "searchVoices"
+					},
+					{
+						"local": "getVoice",
+						"remote": "getVoice"
+					},
+					{
+						"local": "cloneVoice",
+						"remote": "cloneVoice"
+					},
+					{
+						"local": "designVoice",
+						"remote": "designVoice"
+					},
+					{
+						"local": "deleteVoice",
+						"remote": "deleteVoice"
+					},
+					{
+						"local": "getAccount",
+						"remote": "getAccount"
+					},
+					{
+						"local": "makeApiCall",
+						"remote": "makeApiCall"
+					}
+				],
+				"rpc": [
+					{
+						"local": "listVoices",
+						"remote": "listVoices"
+					}
+				]
+			}
+		}
+	]
+}

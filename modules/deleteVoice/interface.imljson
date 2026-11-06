@@ -1,0 +1,7 @@
+[
+	{
+		"name": "voiceId",
+		"type": "text",
+		"label": "Voice ID"
+	}
+]

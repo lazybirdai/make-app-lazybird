@@ -1,0 +1,9 @@
+[
+	{
+		"name": "apiKey",
+		"type": "password",
+		"label": "API key",
+		"required": true,
+		"help": "Your Lazybird API key. Create one in the [Lazybird Studio](https://www.lazybird.app/studio/settings/api) under **Settings → API**."
+	}
+]

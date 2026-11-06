@@ -1,0 +1,39 @@
+[
+	{
+		"name": "description",
+		"type": "text",
+		"multiline": true,
+		"label": "Description",
+		"required": true,
+		"validate": {
+			"max": 500
+		},
+		"help": "Who is speaking: age, gender, pitch, energy, accent and emotion. For example: `A calm middle-aged woman with a warm, low voice`."
+	},
+	{
+		"name": "text",
+		"type": "text",
+		"multiline": true,
+		"label": "Sample text",
+		"required": true,
+		"validate": {
+			"max": 1000
+		},
+		"help": "What the sample says."
+	},
+	{
+		"name": "language",
+		"type": "text",
+		"label": "Language",
+		"help": "The locale of the sample text, for example `en-US`. Detected when empty."
+	},
+	{
+		"name": "seed",
+		"type": "uinteger",
+		"label": "Seed",
+		"validate": {
+			"max": 2147483647
+		},
+		"help": "Reuse a seed to get the same voice again. Leave empty for a new random voice."
+	}
+]

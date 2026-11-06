@@ -1,0 +1,24 @@
+{
+	"id": "Wb7mQe2xT4pLk9sV3nHc1A",
+	"displayName": "My narrator",
+	"description": "Warm, clear narrator",
+	"language": "en-US",
+	"gender": "female",
+	"labels": [
+		"Narrator",
+		"Female"
+	],
+	"styleList": [],
+	"avatar": "https://cdn.lazybird.app/avatars/elyssia.webp",
+	"previewText": "My name is Elyssia and I am a voice from Lazybird.",
+	"previewUrl": "https://cdn.lazybird.app/previews/elyssia.mp3",
+	"scope": "user",
+	"published": false,
+	"mine": true,
+	"favorite": false,
+	"official": false,
+	"featured": false,
+	"popular": false,
+	"trending": false,
+	"createdAt": "2025-03-01T10:00:00.000Z"
+}

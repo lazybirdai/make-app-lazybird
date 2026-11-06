@@ -1,0 +1,36 @@
+[
+	{
+		"condition": "{{parameters.sampleSource == 'file'}}",
+		"url": "/voices",
+		"method": "POST",
+		"type": "multipart/form-data",
+		"timeout": 300000,
+		"body": {
+			"name": "{{parameters.name}}",
+			"rightsConfirmed": "{{parameters.rightsConfirmed}}",
+			"sample": {
+				"value": "{{parameters.data}}",
+				"options": {
+					"filename": "{{parameters.fileName}}"
+				}
+			}
+		},
+		"response": {
+			"output": "{{body.voice}}"
+		}
+	},
+	{
+		"condition": "{{parameters.sampleSource == 'url'}}",
+		"url": "/voices",
+		"method": "POST",
+		"timeout": 300000,
+		"body": {
+			"name": "{{parameters.name}}",
+			"sampleUrl": "{{parameters.sampleUrl}}",
+			"rightsConfirmed": "{{parameters.rightsConfirmed}}"
+		},
+		"response": {
+			"output": "{{body.voice}}"
+		}
+	}
+]

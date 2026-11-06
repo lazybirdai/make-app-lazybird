@@ -1,0 +1,14 @@
+{
+	"url": "/voices/design",
+	"method": "POST",
+	"timeout": 300000,
+	"body": {
+		"description": "{{parameters.description}}",
+		"text": "{{parameters.text}}",
+		"language": "{{parameters.language}}",
+		"seed": "{{parameters.seed}}"
+	},
+	"response": {
+		"output": "{{body}}"
+	}
+}

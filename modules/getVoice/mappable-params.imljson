@@ -1,0 +1,58 @@
+[
+	{
+		"name": "voiceId",
+		"type": "text",
+		"label": "Voice ID",
+		"required": true,
+		"rpc": {
+			"label": "Search voices",
+			"url": "rpc://listVoices",
+			"parameters": [
+				{
+					"name": "section",
+					"type": "select",
+					"label": "Voices",
+					"default": "library",
+					"options": [
+						{
+							"label": "Voice library",
+							"value": "library"
+						},
+						{
+							"label": "My voices",
+							"value": "myVoices"
+						}
+					]
+				},
+				{
+					"name": "q",
+					"type": "text",
+					"label": "Search",
+					"help": "Words in the voice's name, description or labels."
+				},
+				{
+					"name": "language",
+					"type": "text",
+					"label": "Language",
+					"help": "A locale such as `en-US`, or a language such as `en`."
+				},
+				{
+					"name": "gender",
+					"type": "select",
+					"label": "Gender",
+					"options": [
+						{
+							"label": "Female",
+							"value": "female"
+						},
+						{
+							"label": "Male",
+							"value": "male"
+						}
+					]
+				}
+			]
+		},
+		"help": "Map a voice ID, or click **Search voices** to find one. The search shows the first 50 matches; narrow it down to find others."
+	}
+]

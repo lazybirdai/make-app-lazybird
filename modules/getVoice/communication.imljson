@@ -1,0 +1,7 @@
+{
+	"url": "/voices/{{encodeURL(parameters.voiceId)}}",
+	"method": "GET",
+	"response": {
+		"output": "{{body.voice}}"
+	}
+}

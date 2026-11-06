@@ -1,0 +1,16 @@
+{
+	"userId": "u_8f2k1",
+	"email": "user@example.com",
+	"plan": {
+		"tier": "free",
+		"name": "Free",
+		"isPaid": false
+	},
+	"credits": {
+		"used": 1200,
+		"limit": 10000,
+		"extraCredits": 0,
+		"remaining": 8800,
+		"resetsAt": "2026-12-01T00:00:00.000Z"
+	}
+}

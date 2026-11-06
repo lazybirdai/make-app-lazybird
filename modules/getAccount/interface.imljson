@@ -1,0 +1,66 @@
+[
+	{
+		"name": "userId",
+		"type": "text",
+		"label": "User ID"
+	},
+	{
+		"name": "email",
+		"type": "email",
+		"label": "Email"
+	},
+	{
+		"name": "plan",
+		"type": "collection",
+		"label": "Plan",
+		"spec": [
+			{
+				"name": "tier",
+				"type": "text",
+				"label": "Tier"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "isPaid",
+				"type": "boolean",
+				"label": "Paid"
+			}
+		]
+	},
+	{
+		"name": "credits",
+		"type": "collection",
+		"label": "Credits",
+		"spec": [
+			{
+				"name": "used",
+				"type": "integer",
+				"label": "Used"
+			},
+			{
+				"name": "limit",
+				"type": "integer",
+				"label": "Limit"
+			},
+			{
+				"name": "extraCredits",
+				"type": "integer",
+				"label": "Extra credits"
+			},
+			{
+				"name": "remaining",
+				"type": "integer",
+				"label": "Remaining"
+			},
+			{
+				"name": "resetsAt",
+				"type": "date",
+				"label": "Resets at"
+			}
+		]
+	}
+]

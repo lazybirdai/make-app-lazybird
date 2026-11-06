@@ -1,0 +1,28 @@
+{
+	"baseUrl": "https://api.lazybird.app/v2",
+	"headers": {
+		"X-API-Key": "{{connection.apiKey}}"
+	},
+	"log": {
+		"sanitize": [
+			"request.headers.x-api-key"
+		]
+	},
+	"response": {
+		"error": {
+			"message": "[{{statusCode}}] {{ifempty(body.error, body)}}",
+			"401": {
+				"type": "InvalidAccessTokenError",
+				"message": "[{{statusCode}}] {{ifempty(body.error, body)}}"
+			},
+			"422": {
+				"type": "RuntimeError",
+				"message": "[{{statusCode}}] {{ifempty(body.error, body)}} Your Lazybird plan has run out of credits or voice slots, or doesn't include this feature. See your plan at https://www.lazybird.app/studio/settings/usage."
+			},
+			"429": {
+				"type": "RateLimitError",
+				"message": "[{{statusCode}}] {{ifempty(body.error, body)}}"
+			}
+		}
+	}
+}

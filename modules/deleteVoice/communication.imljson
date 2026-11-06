@@ -1,0 +1,9 @@
+{
+	"url": "/voices/{{encodeURL(parameters.voiceId)}}",
+	"method": "DELETE",
+	"response": {
+		"output": {
+			"voiceId": "{{parameters.voiceId}}"
+		}
+	}
+}

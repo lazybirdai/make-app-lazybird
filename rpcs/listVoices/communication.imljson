@@ -1,0 +1,18 @@
+{
+	"url": "/voices",
+	"method": "GET",
+	"qs": {
+		"section": "{{ifempty(parameters.section, 'library')}}",
+		"q": "{{parameters.q}}",
+		"language": "{{parameters.language}}",
+		"gender": "{{parameters.gender}}",
+		"limit": 50
+	},
+	"response": {
+		"iterate": "{{get(body, ifempty(parameters.section, 'library'))}}",
+		"output": {
+			"label": "{{item.displayName}}",
+			"value": "{{item.id}}"
+		}
+	}
+}

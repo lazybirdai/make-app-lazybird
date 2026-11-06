@@ -1,0 +1,24 @@
+{
+	"url": "/voices",
+	"method": "GET",
+	"qs": {
+		"section": "{{parameters.section}}",
+		"q": "{{parameters.q}}",
+		"language": "{{parameters.language}}",
+		"gender": "{{parameters.gender}}",
+		"labels": "{{join(parameters.labels, ',')}}",
+		"sort": "{{parameters.sort}}",
+		"limit": "{{if(parameters.limit > 100, 100, parameters.limit)}}"
+	},
+	"response": {
+		"iterate": "{{get(body, parameters.section)}}",
+		"output": "{{item}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"qs": {
+			"cursor": "{{body.nextCursor}}"
+		},
+		"condition": "{{body.nextCursor}}"
+	}
+}

@@ -1,0 +1,96 @@
+[
+	{
+		"name": "section",
+		"type": "select",
+		"label": "Voices",
+		"default": "library",
+		"required": true,
+		"options": [
+			{
+				"label": "Voice library",
+				"value": "library"
+			},
+			{
+				"label": "My voices",
+				"value": "myVoices"
+			}
+		],
+		"help": "**Voice library** holds the Lazybird voices and the voices users shared. **My voices** are the voices you cloned or designed."
+	},
+	{
+		"name": "q",
+		"type": "text",
+		"label": "Search",
+		"help": "Words to find in the voice's name, description or labels. For example: `narrator`."
+	},
+	{
+		"name": "language",
+		"type": "text",
+		"label": "Language",
+		"help": "A locale such as `en-US`, or a language such as `en` for all of its accents."
+	},
+	{
+		"name": "gender",
+		"type": "select",
+		"label": "Gender",
+		"options": [
+			{
+				"label": "Female",
+				"value": "female"
+			},
+			{
+				"label": "Male",
+				"value": "male"
+			}
+		]
+	},
+	{
+		"name": "labels",
+		"type": "array",
+		"label": "Labels",
+		"spec": {
+			"type": "text",
+			"label": "Label"
+		},
+		"help": "Return only voices that carry all of these labels. For example: `Narrator`."
+	},
+	{
+		"name": "sort",
+		"type": "select",
+		"label": "Sort by",
+		"default": "recommended",
+		"options": [
+			{
+				"label": "Recommended",
+				"value": "recommended"
+			},
+			{
+				"label": "Trending (last 7 days)",
+				"value": "trending"
+			},
+			{
+				"label": "Most used",
+				"value": "usage"
+			},
+			{
+				"label": "Newest",
+				"value": "recent"
+			},
+			{
+				"label": "Name",
+				"value": "name"
+			}
+		]
+	},
+	{
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 10,
+		"required": true,
+		"validate": {
+			"min": 1
+		},
+		"help": "The maximum number of voices Make will return during one execution cycle."
+	}
+]

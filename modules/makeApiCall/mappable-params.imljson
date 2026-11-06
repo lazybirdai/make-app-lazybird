@@ -1,0 +1,85 @@
+[
+	{
+		"name": "url",
+		"type": "text",
+		"label": "URL",
+		"required": true,
+		"help": "Enter a path relative to `https://api.lazybird.app`. For example: `/v2/voices`. See the [API reference](https://www.lazybird.app/text-to-speech-api) for the available endpoints."
+	},
+	{
+		"name": "method",
+		"type": "select",
+		"label": "Method",
+		"required": true,
+		"default": "GET",
+		"options": [
+			{
+				"label": "GET",
+				"value": "GET"
+			},
+			{
+				"label": "POST",
+				"value": "POST"
+			},
+			{
+				"label": "PUT",
+				"value": "PUT"
+			},
+			{
+				"label": "PATCH",
+				"value": "PATCH"
+			},
+			{
+				"label": "DELETE",
+				"value": "DELETE"
+			}
+		]
+	},
+	{
+		"name": "headers",
+		"type": "array",
+		"label": "Headers",
+		"spec": [
+			{
+				"name": "key",
+				"type": "text",
+				"label": "Key"
+			},
+			{
+				"name": "value",
+				"type": "text",
+				"label": "Value"
+			}
+		],
+		"default": [
+			{
+				"key": "Content-Type",
+				"value": "application/json"
+			}
+		],
+		"help": "You don't have to add the API key header; it's added for you."
+	},
+	{
+		"name": "qs",
+		"type": "array",
+		"label": "Query String",
+		"spec": [
+			{
+				"name": "key",
+				"type": "text",
+				"label": "Key"
+			},
+			{
+				"name": "value",
+				"type": "text",
+				"label": "Value"
+			}
+		]
+	},
+	{
+		"name": "body",
+		"type": "any",
+		"label": "Body",
+		"help": "Enter the request body as JSON. For example: `{\"voiceId\": \"tgJ2Hes6DauwTg8kFrRPLN\", \"text\": \"Hello\"}`."
+	}
+]
