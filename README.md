@@ -30,7 +30,7 @@ Watch new rows in a Google Sheet → **Lazybird: Generate speech** with the row'
 The app is kept in the [Make Apps Editor](https://marketplace.visualstudio.com/items?itemName=Integromat.apps-sdk) local file format. `makecomapp.json` maps the files in this repository to the components of the app on Make.
 
 - `tools/upload.py` uploads the files to the app through the Make API.
-- `tools/test_scenario.py run` runs a scenario that uses every module, with each module mapping the outputs of the ones before it.
+- `tools/test_scenario.py main run` runs a scenario that uses every module, with each module mapping the outputs of the ones before it. `tools/test_scenario.py error run` runs one that fails on purpose.
 
 ## License
 

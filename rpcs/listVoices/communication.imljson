@@ -9,6 +9,7 @@
 		"limit": 50
 	},
 	"response": {
+		"limit": 50,
 		"iterate": "{{get(body, ifempty(parameters.section, 'library'))}}",
 		"output": {
 			"label": "{{item.displayName}}",
